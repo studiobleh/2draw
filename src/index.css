@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-electric-yellow: #FFE600;
+    --color-mint-teal: #2DD4BF;
+    --color-bright-cyan: #00E5F0;
+    --color-vibrant-coral: #FF5F38;
+    --color-soft-green: #86EFAC;
+    --color-purple: #B65CE5;
+    --color-workspace: #E5E7EB;
+    --border-brutal: 3px solid #000000;
+    --shadow-brutal: 4px 4px 0px #000000;
+    --shadow-brutal-sm: 2px 2px 0px #000000;
+    --shadow-brutal-lg: 6px 6px 0px #000000;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #DDE1E7;
+    color: #000000;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  *, *::before, *::after {
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+  }
+
+  /* Deliberate precision circular indicators and color spectrum thumb only */
+  .circle-target,
+  .rounded-circle,
+  .spectrum-thumb,
+  .cursor-circle,
+  .brush-cursor-indicator,
+  .brush-cursor-dot {
+    border-radius: 9999px !important;
+    -webkit-border-radius: 9999px !important;
+  }
+
+  button, input, select, textarea {
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    outline: none !important;
+  }
+}
+
+/* Neo-brutalist tactile button */
+.brutal-btn {
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  font-weight: 800;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none !important;
+}
+
+.brutal-btn:focus,
+.brutal-btn:active,
+.brutal-btn:focus-visible {
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  outline: none !important;
+}
+
+.brutal-btn:hover:not(:disabled) {
+  filter: brightness(1.04);
+}
+
+.brutal-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.brutal-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+/* Neo-brutalist panel */
+.brutal-panel {
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  background-color: #FFFFFF;
+}
+
+.brutal-panel-sm {
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  background-color: #FFFFFF;
+}
+
+/* Dotted workspace canvas background */
+.dotted-workspace {
+  background-color: #DDE1E7;
+  background-image: radial-gradient(#9CA3AF 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+/* Checkerboard for transparent canvas */
+.checkerboard {
+  background-image: linear-gradient(45deg, #E5E7EB 25%, transparent 25%),
+    linear-gradient(-45deg, #E5E7EB 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #E5E7EB 75%),
+    linear-gradient(-45deg, transparent 75%, #E5E7EB 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* Custom brutal slider */
+input[type="range"].brutal-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #E5E7EB;
+  border: 2px solid #000000;
+  border-radius: 0;
+  outline: none;
+}
+
+input[type="range"].brutal-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 22px;
+  background: #FFE600;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #000000;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+input[type="range"].brutal-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"].brutal-slider::-moz-range-thumb {
+  width: 18px;
+  height: 22px;
+  background: #FFE600;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #000000;
+  cursor: pointer;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE600;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FBBF24;
+}

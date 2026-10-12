@@ -1,0 +1,6 @@
+{
+  "name": "2Draw - 2D Animation Studio",
+  "description": "Professional browser-based 2D frame-by-frame animation studio with multi-layer timeline, onion skinning, audio sync, and WebM/GIF/PNG export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
